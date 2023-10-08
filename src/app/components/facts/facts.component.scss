@@ -1,0 +1,39 @@
+@import "../../../variables.scss";
+section {
+  background-color: $secondary;
+  background-image: url("../../../assets/images/footer-left.png");
+  background-position: 10% 30%;
+  background-repeat: no-repeat;
+  margin-top: 2rem;
+  padding-block: 8rem;
+  opacity: 0; // Set initial opacity to 0
+  animation: fade-in 1s ease-out forwards;
+  .tile {
+    background-image: url("../../../assets/images/card-bg.jpg");
+    transition: transform 0.3s ease-in-out;
+    &:hover {
+      transform: translateY(-1rem);
+      i {
+        background-color: teal !important;
+      }
+    }
+    i {
+      font-size: 4rem;
+      padding: 1rem;
+    }
+    i,
+    span {
+      white-space: nowrap;
+    }
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px); // Initial position or any other transformation
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); // Final position or any other transformation
+  }
+}

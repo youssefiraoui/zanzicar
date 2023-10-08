@@ -1,0 +1,29 @@
+@import "./../../../variables.scss";
+
+section {
+  background-image: url("../../../assets/images/banner2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $small-screen-width) {
+    padding: 2rem;
+  }
+  @media (min-width: $medium-screen-width) {
+    padding: 6rem;
+  }
+  @media (min-width: $large-screen-width) {
+    padding: 8rem;
+  }
+
+  .title {
+    font-size: max(3.5vw, 2rem);
+    font-weight: bolder;
+    line-height: 2rem;
+  }
+  .view-car {
+    border: 2px solid black;
+    i {
+      margin-top: 3px;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+@import "../../../variables.scss";
+
+section {
+  background-color: $secondary;
+  background-image: url("../../../assets/images/footer-right.png");
+  background-position: right bottom;
+  background-repeat: no-repeat;
+  .links {
+    display: grid;
+    @media (min-width: $small-screen-width) {
+      place-items: center;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: 1fr;
+      text-align: center;
+      row-gap: 2rem;
+    }
+    @media (min-width: $medium-screen-width) {
+      text-align: center;
+      grid-template-rows: repeat(2, 1fr);
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: $large-screen-width) {
+      text-align: start;
+      grid-template-rows: 1fr;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 0%;
+    }
+    h4 {
+      font-weight: bolder;
+      color: white;
+      margin-top: 0%;
+    }
+    li {
+      color: gray;
+      line-height: 2rem;
+    }
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+    }
+    .phone i,
+    .email i {
+      padding: 0.5rem;
+      background-color: $primary;
+      font-size: 2rem;
+      border-radius: 5px;
+    }
+
+    .phone span,
+    .email span {
+      font-weight: bold;
+    }
+  }
+}

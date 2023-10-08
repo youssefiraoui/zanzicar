@@ -1,0 +1,19 @@
+@import "./../variables.scss";
+
+.wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: $header-height 1fr 10rem;
+  grid-template-areas: "header" "main-content" "footer";
+  height: 100vh;
+}
+.header {
+  grid-area: header;
+}
+.main-content {
+  grid-area: main-content;
+}
+.footer {
+  grid-area: footer;
+}

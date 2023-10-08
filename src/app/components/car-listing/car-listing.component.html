@@ -1,0 +1,162 @@
+<div class="banner d-flex align-items-center justify-content-center flex-column">
+  <h3 class="text-light">Car Listings</h3>
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="home">Home</a></li>
+      <li class="breadcrumb-item"><a href="listing">Listing</a></li>
+      <li class="breadcrumb-item active text-light" aria-current="page">Car Listings</li>
+    </ol>
+  </nav>
+</div>
+<div class="fluid-container row wrapper">
+  <div class="col-lg-4 col-xl-3">
+    <div class="card sticky mb-4">
+      <div class="card-body">
+          <p class="title fs-5">What Are You Looking For</p>
+          <!-- <div class="input-group">
+            <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Search text...">
+            <div class="input-group-text"><i class='bx bx-search'></i></div>
+          </div> -->
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  Car Category
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Tesla
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Ford
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Audi
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Kia
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Honda
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed  fw-bold" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Car Types
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      SUV
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Convertible
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Crossover
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <label class="form-check-label" for="exampleCheckbox">
+                      Sedan
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed  fw-bold" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Ratings
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <div class="rating justify-content-start">
+                      <star-rating [starType]="'svg'" [rating]="5" [readOnly]="true"></star-rating>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <div class="rating justify-content-start">
+                      <star-rating [starType]="'svg'" [rating]="4" [readOnly]="true"></star-rating>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <div class="rating justify-content-start">
+                      <star-rating [starType]="'svg'" [rating]="3" [readOnly]="true"></star-rating>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <div class="rating justify-content-start">
+                      <star-rating [starType]="'svg'" [rating]="2" [readOnly]="true"></star-rating>
+                    </div>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <div class="rating justify-content-start">
+                      <star-rating [starType]="'svg'" [rating]="1" [readOnly]="true"></star-rating>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+          <div class="d-flex justify-content-around mt-4">
+            <div class="btn btn-primary col-4 text-light">Reset</div>
+            <div class="btn btn-primary col-4 text-light">Apply</div>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- right part-->
+  <div class="col-lg-8 col-xl-9 fluid-container">
+    <div class="car-list">
+     <div class="row row-gap-3">
+      <div class="col-md-4  col-xl-4 p-0" *ngFor="let car of allCars">
+        <app-car-overview [model_name]="car.model_name" [price]="car.price" [year]="car.year" [body]="car.body"
+          [fuel]="car.fuel" [transmission]="car.transmission" [milage]="car.mileage" [persons]="car.persons"
+          [img]="car.img" [rating]="car.rating" [city]="car.city"></app-car-overview>
+      </div>
+     </div>
+    </div>
+  </div>
+</div>

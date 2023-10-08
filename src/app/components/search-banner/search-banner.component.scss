@@ -1,0 +1,32 @@
+@import "./../../../variables.scss";
+
+section {
+  border-radius: 1rem;
+
+  @media (min-width: $small-screen-width) {
+    margin-top: 4rem;
+  }
+
+  @media (min-width: $medium-screen-width) {
+    margin-top: -2rem;
+  }
+  .location-wrapper {
+    white-space: nowrap;
+  }
+  .form-wrapper {
+    display: grid;
+    @media (min-width: $small-screen-width) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      column-gap: 2rem;
+    }
+    @media (min-width: $medium-screen-width) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+    @media (min-width: $large-screen-width) {
+      grid-template-columns: 1.5fr 1fr 1fr 6rem;
+      grid-template-rows: 1fr;
+    }
+  }
+}

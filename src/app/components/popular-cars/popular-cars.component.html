@@ -1,0 +1,23 @@
+<section data-aos="fade-down">
+
+    <div class=" title-wrapper">
+        <h2 class="title fw-bolder text-center">Explore Most Popular Cars</h2>
+
+        <div class="d-flex flext-column align-items-center justify-content-center mt-3"><img
+                src="./../../../assets/images/title-head.png" alt=""></div>
+        <div class="description text-center">
+            <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text </p>
+            <p>ever
+                since
+                the 1500s,</p>
+        </div>
+    </div>
+    <div class="wrapper mx-5">
+
+        <div class="row" *ngFor="let car of allCars">
+            <app-car-overview [model_name]="car.model_name" [price]="car.price" [year]="car.year" [body]="car.body"
+                [fuel]="car.fuel" [transmission]="car.transmission" [milage]="car.mileage" [persons]="car.persons"
+                [img]="car.img" [rating]="car.rating" [city]="car.city"></app-car-overview>
+        </div>
+    </div>
+</section>

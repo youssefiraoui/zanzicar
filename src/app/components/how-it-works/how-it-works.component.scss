@@ -1,0 +1,27 @@
+section {
+  padding-block: 8rem;
+  .service-title {
+    margin-top: 3rem;
+  }
+  .service-icon {
+    width: 5rem;
+    height: 5rem;
+    display: inline-block;
+    position: relative;
+  }
+
+  .service-icon::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    bottom: -10px;
+    left: -10px;
+    border: 3px dashed #9f9f9f;
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .bg-teal {
+    background-color: teal;
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../../variables.scss";
+
+.banner {
+    width: 100%;
+    height: 10rem;
+    background-image: url('./../../../assets/images/footer-left.png'), url('./../../../assets/images/footer-right.png');
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-color: $secondary;
+}
+
+@mixin margin-for-screen-size($margin) {
+    margin: $margin;
+
+    @media (min-width: $small-screen-width) {
+        margin-inline: $margin;
+    }
+
+    @media (min-width: $medium-screen-width) {
+        margin-inline: $margin * 2;
+    }
+
+    @media (min-width: $large-screen-width) {
+        margin-inline: $margin * 3;
+    }
+
+    @media (min-width: $extra-large-screen-width) {
+        margin-inline: $margin * 4;
+    }
+
+    @media (min-width: $double-extra-large-screen-width) {
+        margin-inline: $margin * 8;
+    }
+}
+
+.wrapper {
+    @include margin-for-screen-size(1rem);
+    margin-top: 4rem;
+    .sticky {
+        position: sticky;
+        top: 0;
+    }
+
+    .filter {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        overflow-y: auto;
+        /* Enable vertical scrolling */
+    }
+}

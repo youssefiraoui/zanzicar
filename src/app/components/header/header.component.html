@@ -1,0 +1,31 @@
+<div data-aos="fade-up" data-aos-duration="2000"
+    class="px-5 h-100 d-flex flex-row align-items-center justify-content-between bg-lighter shadow">
+    <div class="logo-wrapper row" [routerLink]="['home']">
+        <span class="menu fs-2 col-2 d-md-block d-lg-none p-2 bg-light" (click)="toggleSideNavBar()">
+            <i class="bx" [class.bx-menu]="!isSideBarVisible" [class.bx-x]="isSideBarVisible"></i>
+        </span>
+
+        <img class="col-10 logo" src="../../../assets/images/logo1.png" alt="">
+    </div>
+    <div class="nav d-none d-lg-block">
+        <ul class="d-flex m-0 p-0 flex-row align-items-center justify-content-center gap-5 fw-bolder">
+            <li routerLink="/home">Home</li>
+            <li routerLink="/car-listing">Our Cars</li>
+            <li routerLink="/contactus">Contact Us</li>
+        </ul>
+    </div>
+   <!-- <div class="herder-buttons d-md-block d-none">
+        <div class="btn btn-secondary text-light p-2 fw-bold"><i class='bx bx-user mx-1 fw-bold'></i>Sign In</div>
+        <div class="ms-2 btn btn-primary  text-light p-2 fw-bold"><i class='bx bxs-lock-alt mx-1 fw-bold'></i>Sign Up
+        </div>
+    </div> -->
+</div>
+<div class="side-nav bg-dark position-absolute pt-5" [class.active]="isSideBarVisible">
+    <ul class="text-light ps-5 d-flex flex-column h-100 gap-5 fw-bolder">
+        <li>Home</li>
+        <li>Popular Car Types</li>
+        <li>Recommended Cars</li>
+   <!--     <li>Sign in</li>
+        <li>Sign Up</li>-->
+    </ul>
+</div>

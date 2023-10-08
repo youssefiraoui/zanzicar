@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variables.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/boxicons/css/boxicons.css";
+@import '~css-star-rating/css/star-rating.min.css';
+$enable-negative-margins: true;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fcfbfb;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+.bg-light {
+  background-color: rgb(248, 248, 248);
+}
+.bg-lighter {
+  background-color: white;
+}
+.no-scroll {
+  overflow: hidden;
+}
+
+.text-grey {
+  color: gray;
+}
+
+.btn-action{
+  background-color: #d0d0d0;
+  &:hover{
+    background-color: #387468;
+    color: white;
+  }
+}
+
+.card-heading{
+  border-bottom: #e4e0e0e2 solid 1px;
+
+  &::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    background-color: rgb(255, 129, 71);
+    width: 25px;
+    height: 5px;
+    border-radius: 2px;
+  }
+}
+
