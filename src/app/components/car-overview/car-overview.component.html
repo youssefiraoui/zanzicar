@@ -9,11 +9,20 @@
                 <star-rating [starType]="'svg'" [rating]="rating" [readOnly]="true"></star-rating>
             </div> -->
             <div class="overview p-2 my-2 d-flex flex-row flex-wrap justify-content-between" >
-                    <div class="col-xl-4 col-sm-6 transmission d-flex justify-content-start">
+                <div class="col-xl-4 col-sm-4 transmission d-flex justify-content-start">
+                    <span><i class='bx bx-body'></i></span><span>{{transmission}}</span>
+                </div>
+                <div class="col-xl-4 col-sm-4  milage d-flex justify-content-xl-center">
+                    <span><i class='bx bx-wind'></i></span><span>Climatisation</span>
+                </div>
+                <div class="col-xl-4 col-sm-4  fuel d-flex justify-content-xl-end">
+                    <span><i class='bx bxs-user-detail'></i></span><span>{{persons}}</span>
+                </div>
+                    <!-- <div class="col-xl-4 col-sm-6 transmission d-flex justify-content-start">
                         <span><i class='bx bx-body'></i></span><span>{{transmission}}</span>
                     </div>
                     <div class="col-xl-4 col-sm-6  milage d-flex justify-content-sm-end justify-content-xl-center">
-                        <span><i class='bx bx-tachometer'></i></span><span>{{milage}}</span>
+                        <span><i class='bx bx-tachometer'></i></span><span>Unlimited</span>
                     </div>
                     <div class="col-xl-4 col-sm-6  fuel d-flex justify-content-sm-start justify-content-xl-end">
                         <span><i class='bx bx-gas-pump'></i></span><span>{{fuel}}</span>
@@ -23,11 +32,11 @@
                         <span><i class='bx bx-pie-chart'></i></span><span>{{body}}</span>
                     </div>
                     <div class="col-xl-4  col-sm-6 year d-flex justify-content-sm-start justify-content-xl-center">
-                        <span><i class='bx bx-cog'></i></span><span>{{year}}</span>
+                        <span><i class='bx bx-wind'></i></span><span>Climatisation</span>
                     </div>
                     <div class="col-xl-4  col-sm-6 persons d-flex justify-content-end">
                         <span><i class='bx bxs-user-detail'></i></span><span>{{persons}}</span>
-                    </div>
+                    </div> -->
             </div>
             <!-- <div
                 class="available-location bg-light d-flex align-items-center justify-content-between flex-row p-3 rounded">

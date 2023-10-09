@@ -1,11 +1,11 @@
 <div data-aos="fade-up" data-aos-duration="2000"
     class="px-5 h-100 d-flex flex-row align-items-center justify-content-between bg-lighter shadow">
-    <div class="logo-wrapper row" [routerLink]="['home']">
+    <div class="logo-wrapper row">
         <span class="menu fs-2 col-2 d-md-block d-lg-none p-2 bg-light" (click)="toggleSideNavBar()">
             <i class="bx" [class.bx-menu]="!isSideBarVisible" [class.bx-x]="isSideBarVisible"></i>
         </span>
 
-        <img class="col-10 logo" src="../../../assets/images/logo1.png" alt="">
+        <img [routerLink]="['home']" class="col-10 logo" src="../../../assets/images/logo1.png" alt="">
     </div>
     <div class="nav d-none d-lg-block">
         <ul class="d-flex m-0 p-0 flex-row align-items-center justify-content-center gap-5 fw-bolder">

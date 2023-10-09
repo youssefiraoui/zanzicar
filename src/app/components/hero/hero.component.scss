@@ -15,6 +15,12 @@ section {
     padding: 8rem;
   }
 
+  @media (max-width: 768px) {
+    .hero-car-wrapper {
+        display: none;
+    }
+}
+
   .title {
     font-size: max(3.5vw, 2rem);
     font-weight: bolder;
