@@ -24,33 +24,33 @@
               <div id="flush-collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.renault" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Tesla
+                      Renault
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.dacia" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Ford
+                      Dacia
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.bmw" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Audi
+                      BMW
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.toyota" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Kia
+                      Toyota
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.citroin" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Honda
+                      Citroïn
                     </label>
                   </div>
                 </div>
@@ -66,78 +66,24 @@
               <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
                 <div class="accordion-body">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.automatique" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      SUV
+                      Automatique
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
+                    <input class="form-check-input" [(ngModel)]="filter.manual" type="checkbox" id="exampleCheckbox">
                     <label class="form-check-label" for="exampleCheckbox">
-                      Convertible
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <label class="form-check-label" for="exampleCheckbox">
-                      Crossover
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <label class="form-check-label" for="exampleCheckbox">
-                      Sedan
+                      Manualle
                     </label>
                   </div>
                 </div>
               </div>
             </div>
-            <!-- <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed  fw-bold" type="button" data-bs-toggle="collapse"
-                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Ratings
-                </button>
-              </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <div class="rating justify-content-start">
-                      <star-rating [starType]="'svg'" [rating]="5" [readOnly]="true"></star-rating>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <div class="rating justify-content-start">
-                      <star-rating [starType]="'svg'" [rating]="4" [readOnly]="true"></star-rating>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <div class="rating justify-content-start">
-                      <star-rating [starType]="'svg'" [rating]="3" [readOnly]="true"></star-rating>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <div class="rating justify-content-start">
-                      <star-rating [starType]="'svg'" [rating]="2" [readOnly]="true"></star-rating>
-                    </div>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="exampleCheckbox">
-                    <div class="rating justify-content-start">
-                      <star-rating [starType]="'svg'" [rating]="1" [readOnly]="true"></star-rating>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-          </div>
+            </div>
           <div class="d-flex justify-content-around mt-4">
-            <div class="btn btn-primary col-4 text-light">Reset</div>
-            <div class="btn btn-primary col-4 text-light">Apply</div>
+            <div class="btn btn-primary col-4 text-light" (click)="reset()">Reset</div>
+            <div class="btn btn-primary col-4 text-light" (click)="apply()">Apply</div>
           </div>
       </div>
     </div>

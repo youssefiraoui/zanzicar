@@ -8,32 +8,24 @@ export class CarGeneratorService {
   carEntries: CarEntry[] = [];
   imageIndex = 0;
   private modelNames = [
-    'Corolla',
-    'Civic',
-    'Mustang',
-    'Camaro',
-    '3 Series',
-    'Accord',
-    'Camry',
-    'F-150',
-    'Cherokee',
-    'Tucson',
-    'Qashqai',
-    'C-Class',
-    'Fiesta',
-    'Optima',
-    'A4',
+    'Toyota Corolla',
+    'Dacia Logan',
+    'BMW X1',
+    'Renault Clio 4',
+    'Hyundai i10',
+    'Toyota Qashqai',
+    'Ford Fiesta',
   ];
   private makes = [
     'Toyota',
-    'Honda',
-    'Ford',
-    'Chevrolet',
+    'Dacia',
     'BMW',
+    'Citroin',
+    'Renault',
     'Hyundai',
     'Nissan',
     'Mercedes-Benz',
-    'Kia',
+    'Ford',
     'Audi',
   ];
   private fuels = ['Petrol', 'Diesel', 'Electric', 'Hybrid'];
@@ -98,7 +90,7 @@ export class CarGeneratorService {
   }
   getAllCars(): CarEntry[] {
     this.carEntries = [];
-    for (let i = 0; i < 21; i++) {
+    for (let i = 0; i < 7; i++) {
       const carEntry: CarEntry = this.generateCarEntry(false);
       this.carEntries.push(carEntry);
     }

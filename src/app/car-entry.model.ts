@@ -17,3 +17,14 @@ export interface CarEntry {
   city:string;
   address:string;
 }
+
+export interface Filter {
+  renault : boolean;
+  dacia : boolean;
+  bmw: boolean;
+  toyota: boolean;
+  citroin: boolean;
+
+  automatique: boolean;
+  manual: boolean;
+}

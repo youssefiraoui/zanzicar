@@ -18,6 +18,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { StarRatingModule } from 'angular-star-rating';
 import { RentNowComponent } from './components/rent-now/rent-now.component';
 import { TostringPipe } from './tostring.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent,
@@ -26,7 +27,7 @@ import { TostringPipe } from './tostring.pipe';
     FactsComponent, ContactUsComponent, SearchBannerComponent,
     CarOverviewComponent, CarListingComponent, PageNotFoundComponent, RentNowComponent,
     TostringPipe],
-  imports: [BrowserModule, AppRoutingModule, StarRatingModule.forRoot()],
+  imports: [BrowserModule, AppRoutingModule,FormsModule, StarRatingModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent],
 })
