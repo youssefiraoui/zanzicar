@@ -31,16 +31,37 @@ export class CarListingComponent implements OnInit{
   }
 
   reset() {
-    throw new Error('Method not implemented.');
+    this.filter =  { 
+      renault : false,
+      dacia : false,
+      bmw: false,
+      toyota: false,
+      citroin: false,
+      automatique: false,
+      manual: false,
+    }
+    this.allCars = this.carGeneratorService.getAllCars();
     }
 
     FilterCars(){
+      console.log(this.filter);
+      console.log(this.allCars);
+
       this.allCars = this.allCars.filter((car) => {
         return (
-         ( !this.filter.renault || car.model_name.includes('Renault')) &&
-         ( !this.filter.dacia || car.model_name.includes('Dacia'))
+         ( ( !this.filter.renault || car.model_name.includes('Renault')) ||
+          ( !this.filter.dacia || car.model_name.includes('Dacia')) ||
+          ( !this.filter.bmw || car.model_name.includes('BMW')) ||
+          ( !this.filter.toyota || car.model_name.includes('TOYOTA')) ||
+          ( !this.filter.citroin || car.model_name.includes('CITROÏN')) )
+          && ( ( !this.filter.automatique || car.transmission == "Automatic"))
         )
       });
+      // this.allCars = this.allCars.filter((car) => {
+      //   return (
+      //     ( !this.filter.automatique || car.transmission == "Automatic")
+      //     )
+      //   });
     }
 
   apply() {
