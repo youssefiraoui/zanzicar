@@ -28,3 +28,12 @@ export interface Filter {
   automatique: boolean;
   manual: boolean;
 }
+
+export interface Car {
+  model: string;
+  transmission: string;
+  climatisation: boolean;
+  nb_persons: number;
+  nb_valise: number;
+  imgs: string[];
+}

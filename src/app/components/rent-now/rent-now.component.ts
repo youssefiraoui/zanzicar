@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CarEntry } from 'src/app/car-entry.model';
+import { Car, CarEntry } from 'src/app/car-entry.model';
 import { CarGeneratorService } from 'src/app/services/car-generator.service';
 
 @Component({
@@ -11,7 +11,8 @@ import { CarGeneratorService } from 'src/app/services/car-generator.service';
 export class RentNowComponent {
   constructor(private route: ActivatedRoute, private carService:CarGeneratorService) { }
  id:any;
- car:CarEntry;
+ //car:CarEntry;
+ car:Car;
 
  carImageSources:string[];
 

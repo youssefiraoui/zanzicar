@@ -7,21 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./car-overview.component.scss'],
 })
 export class CarOverviewComponent {
-  @Input() model_name: string | undefined;
   @Input() model: string | undefined;
-  @Input() fuel: string | undefined;
   @Input() transmission: string | undefined;
-  @Input() year: number | undefined;
-  @Input() color: string | undefined;
-  @Input() price: number | undefined;
-  @Input() body: string | undefined;
-  @Input() milage: number | undefined;
-  @Input() make: string | undefined;
-  @Input() enginePower: string | undefined;
-  @Input() img: string | undefined;
-  @Input() city: string | undefined;
   @Input() persons: number | undefined;
-  @Input() rating: number = 0;
+  @Input() climatisation: boolean | false;
+  @Input() nb_persons: number | undefined;;
+  @Input() nb_valise: number | undefined;;
+ // @Input() imgs: string[] | [];;
+ //img : string = '../../../assets/images/car-01.jpg'
+ img : string = '../../../assets/imgs/clio4_1.jpg'
 
 
 

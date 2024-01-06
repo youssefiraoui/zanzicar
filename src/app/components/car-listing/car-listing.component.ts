@@ -1,6 +1,6 @@
 import { Component, OnInit  } from '@angular/core';
 import { Router, Event, NavigationStart } from '@angular/router';
-import { CarEntry, Filter } from 'src/app/car-entry.model';
+import { Car, CarEntry, Filter } from 'src/app/car-entry.model';
 import { CarGeneratorService } from 'src/app/services/car-generator.service';
 
 @Component({
@@ -10,8 +10,8 @@ import { CarGeneratorService } from 'src/app/services/car-generator.service';
 })
 export class CarListingComponent implements OnInit{
 
-  allCars: CarEntry[];
-  filteredItems : CarEntry[];
+  allCars: Car[];
+  filteredItems : Car[];
   constructor(private carGeneratorService: CarGeneratorService) {
    
   }
@@ -49,11 +49,11 @@ export class CarListingComponent implements OnInit{
 
       this.allCars = this.allCars.filter((car) => {
         return (
-         ( ( !this.filter.renault || car.model_name.includes('Renault')) ||
-          ( !this.filter.dacia || car.model_name.includes('Dacia')) ||
-          ( !this.filter.bmw || car.model_name.includes('BMW')) ||
-          ( !this.filter.toyota || car.model_name.includes('TOYOTA')) ||
-          ( !this.filter.citroin || car.model_name.includes('CITROÏN')) )
+         ( ( !this.filter.renault || car.model.includes('Renault')) ||
+          ( !this.filter.dacia || car.model.includes('Dacia')) ||
+          ( !this.filter.bmw || car.model.includes('BMW')) ||
+          ( !this.filter.toyota || car.model.includes('TOYOTA')) ||
+          ( !this.filter.citroin || car.model.includes('CITROÏN')) )
           && ( ( !this.filter.automatique || car.transmission == "Automatic"))
         )
       });

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CarEntry } from 'src/app/car-entry.model';
+import { Car, CarEntry } from 'src/app/car-entry.model';
 import { CarGeneratorService } from 'src/app/services/car-generator.service';
 
 @Component({
@@ -8,7 +8,7 @@ import { CarGeneratorService } from 'src/app/services/car-generator.service';
   styleUrls: ['./popular-cars.component.scss'],
 })
 export class PopularCarsComponent {
-  allCars: CarEntry[];
+  allCars: Car[];
   constructor(private carGeneratorService: CarGeneratorService) {
     this.allCars = carGeneratorService.getPopularCars();
   }

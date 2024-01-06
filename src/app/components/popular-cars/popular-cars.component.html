@@ -15,9 +15,12 @@
     <div class="wrapper mx-5">
 
         <div class="row" *ngFor="let car of allCars">
-            <app-car-overview [model_name]="car.model_name" [price]="car.price" [year]="car.year" [body]="car.body"
-                [fuel]="car.fuel" [transmission]="car.transmission" [milage]="car.mileage" [persons]="car.persons"
-                [img]="car.img" [rating]="car.rating" [city]="car.city"></app-car-overview>
+            <app-car-overview [model]="car.model"
+                [transmission]="car.transmission" 
+                [nb_persons]="car.nb_persons"
+                [nb_valise]="car.nb_valise"
+                [climatisation]="car.climatisation"
+                ></app-car-overview>
         </div>
     </div>
 </section>

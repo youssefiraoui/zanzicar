@@ -94,9 +94,14 @@
     <div class="car-list">
      <div class="row row-gap-3">
       <div class="col-md-4  col-xl-4 p-0" *ngFor="let car of allCars">
-        <app-car-overview [model_name]="car.model_name" [price]="car.price" [year]="car.year" [body]="car.body"
-          [fuel]="car.fuel" [transmission]="car.transmission" [milage]="car.mileage" [persons]="car.persons"
-          [img]="car.img" [rating]="car.rating" [city]="car.city"></app-car-overview>
+
+            <app-car-overview [model]="car.model"
+                [transmission]="car.transmission" 
+                [nb_persons]="car.nb_persons"
+                [nb_valise]="car.nb_valise"
+                [climatisation]="car.climatisation"
+                ></app-car-overview>
+
       </div>
      </div>
     </div>
